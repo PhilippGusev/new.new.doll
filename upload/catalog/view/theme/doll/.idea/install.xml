@@ -1,0 +1,14 @@
+<modification>
+	<name>One page checkout</name>
+	<version>1.0</version>
+	<link>http://web-andryshka.ru/</link>
+	<author>Andrey Derevjanko</author>
+	<code>One_page_checkout</code>
+
+	<file path="catalog/controller/checkout/cart.php">
+		<operation>
+			<search index="0"><![CDATA[	$data['checkout'] = $this->url->link('checkout/checkout', '', true); ]]></search>
+			<add position="replace" ><![CDATA[ $data['checkout'] = $this->url->link('checkout/onepagecheckout', '', true);	]]></add>
+		</operation>
+	</file>
+</modification>
